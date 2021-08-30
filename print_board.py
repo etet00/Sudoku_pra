@@ -3,7 +3,7 @@ class PrintBoard:
          self.board = board
 
     def print_board(self):
-        new_board = self.borad_num()
+        new_board = self.board_num()
         for i in range(19):
             if i == 0:
                 print("╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗")  # 上面外框 line1
@@ -17,7 +17,7 @@ class PrintBoard:
                 j = int((i - 1)/2)
                 print(new_board[j])
 
-    def borad_num(self):
+    def board_num(self):
         b_list = []
         for i in self.board:
             b = self.num2str(i)

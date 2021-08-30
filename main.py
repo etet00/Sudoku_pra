@@ -8,8 +8,6 @@ SIDE = BASE * BASE
 
 def main():
     board = generate_board()
-    # for i in board:
-    #     print(i)
     b = PrintBoard(board)
     b.print_board()
 
