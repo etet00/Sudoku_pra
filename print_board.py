@@ -1,6 +1,6 @@
 class PrintBoard:
     def __init__(self, board):
-         self.board = board
+        self.board = board
 
     def print_board(self):
         new_board = self.board_num()
@@ -27,19 +27,14 @@ class PrintBoard:
     def num2str(self, b):
         b_with_str = []
         for k in range(len(b)):
-            b_with_str.append(str(b[k]))
+            if b[k] == 0:
+                temp = " "
+            else:
+                temp = str(b[k])
+            b_with_str.append(temp)
         return b_with_str
 
     def line_include_num(self, b):
         a = "║ . │ . │ . ║ . │ . │ . ║ . │ . │ . ║".split(".")
         return a[0]+b[0]+a[1]+b[1]+a[2]+b[2]+a[3]+b[3]+a[4]+b[4]+a[5]+b[5]+a[6]+b[6]+a[7]+b[7]+a[8]+b[8]+a[9]
 
-
-
-    
-        # print_board(board)   
-        # print("╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗")  # 上面外框 line1
-        # print("║ . │ . │ . ║ . │ . │ . ║ . │ . │ . ║")  # 上面外框 line2 
-        # print("╟───┼───┼───╫───┼───┼───╫───┼───┼───╢")  # 中間內框 line3
-        # print("╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣")  # 中框間隔 line7
-        # print("╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝")  # 下面外框 line19     
