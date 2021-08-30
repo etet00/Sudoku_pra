@@ -12,6 +12,7 @@ board =[
     [6, 7, 4, 9, 2, 8, 3, 1, 5],
 ]
 
+
 def num2str(b):
     b_with_str = []
     for k in range(len(b)):

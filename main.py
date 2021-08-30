@@ -1,5 +1,6 @@
 from random import sample
 
+
 BASE = 3
 SIDE = BASE * BASE
 
