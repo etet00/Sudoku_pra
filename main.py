@@ -1,4 +1,5 @@
 from random import sample
+from print_board import PrintBoard
 
 
 BASE = 3
@@ -6,9 +7,11 @@ SIDE = BASE * BASE
 
 
 def main():
-    b = generate_board()
-    for i in b:
-        print(i)
+    board = generate_board()
+    # for i in board:
+    #     print(i)
+    b = PrintBoard(board)
+    b.print_board()
 
 
 # 產生數獨題目
@@ -18,21 +21,23 @@ def generate_board():
     # print(rows)
     cols = get_list(rbase)
     # print(cols)
-    nums  = shuffle(range(1, SIDE+1))
+    nums = shuffle(range(1, SIDE+1))
     board = get_board(rows, cols, nums)
     # print(board)
     return board
 
+
 # 產生隨機不重複數字的 list
 def shuffle(s):
     return sample(s,len(s))
+
 
 # 產生 0 ~ 8 位置不重複的 list
 def get_list(rbase):
     temp = []
     for r in shuffle(rbase):
         for g in shuffle(rbase):
-            temp.append( g*BASE + r)
+            temp.append(g*BASE + r)
     return temp
 
 
